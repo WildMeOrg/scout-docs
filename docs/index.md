@@ -26,6 +26,8 @@ all-users/index
 support-and-faq
 ```
 
+## How Can You Help?
+
 Want to put your talents to use fighting the 6th mass extinction? We're excited to have you! Get started here:
 
 ```{toctree}
