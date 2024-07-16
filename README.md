@@ -3,7 +3,8 @@ This repo contains the documentation for Wild Me's Scout. Documentation is publi
 
 ## Planned changes
 The documentation will eventually support:
-- 
+- internationalization
+- versioning
 
 ## Local Setup
 1. Install the prereqs:
