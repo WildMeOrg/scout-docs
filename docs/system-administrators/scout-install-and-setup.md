@@ -19,7 +19,17 @@ Enter the following in the Ubuntu Terminal: `docker pull wildme/scout:latest` to
 The remaining steps of Setup can be completed offline. Enter the run command in the Ubuntu Terminal to launch Scout for setup.
 
 **GPU processing with System File Storage**
-``  docker run --privileged -p 1337:1337 --rm -it --gpus all --mount type=bind,source=/data,target=/data -e ENV_IP="`ip route get 1 | sed 's/^.*src \([^ ]*\).*$/\1/;q'`" -v /data/scout/db:/data/db -v /data/scout/tmp:/tmp/scout-tmp wildme/scout:latest ``
+```
+docker run --privileged -p 1337:1337 --rm -it --gpus all --mount type=bind,source=/data,target=/data -e ENV_IP="`ip route get 1 | sed 's/^.*src \([^ ]*\).*$/\1/;q'`" -v /data/scout/db:/data/db -v /data/scout/tmp:/tmp/scout-tmp wildme/scout:latest
+```
+- `--privileged` grants the container full access to the host system.
+- `-p 1337:1337` connects the container port 1337 to the local machine port 1337
+- `--rm` automatically removes the container on exit
+- `-it` runs the system in interactive mode, which provides more verbose language and prompts
+- `--gpus all` use GPU
+- `--mount type=bind,source=/data,target=/data` set image location
+- `-e ENV_IP="ip route get 1 | sed 's/^.*src \([^ ]*\).*$/\1/;q'"` figures out the IP address
+- `-v /data/scout/db:/data/db -v /data/scout/tmp:/tmp/scout-tmp wildme/scout:latest` the image to be run with the data/image locations listed
 
 During first installation, you are prompted to enter a source image directory where the images are stored.
  
