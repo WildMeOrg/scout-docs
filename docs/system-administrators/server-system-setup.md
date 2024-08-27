@@ -2,59 +2,13 @@
 
 Scout can be configured a number of ways, some of which require additional system setup.
 
-## Ubuntu
-
-```{note}
-The following Ubuntu installation tutorial is provided to assist users unfamiliar with Linux installation, but is not covered under our support services. Should you encounter problems, seek resources in the Linux community online.
-```
-
-Make sure that the laptop is connected to a fast and stable internet connection. Software download is required during this process, and some of the downloaded components may be > 2 GB.
-Obtain a thumb drive (8GB minimum) to store downloaded files for the Ubuntu operating system.
-
-### Download Ubuntu OS Image
-
-```{warning}
-This process wipes the server of all existing content to install the Ubuntu Linux operating system. Ensure all existing content is backed up before proceeding.
-```
-
-Install Ubuntu as the only OS on the laptop; dual boot configurations are not supported. The following instructions are for version 20.04.
-
-1. On a separate computer, open a web browser and navigate to the [Ubuntu 20.04 release page](https://releases.ubuntu.com/20.04.5/).
-2. Download the [ISO Desktop image](https://releases.ubuntu.com/20.04.5/ubuntu-20.04.5-desktop-amd64.iso).
-3. Use the [thumb drive to create a Ubuntu installation tool](https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview).
-
-### Install Ubuntu OS Image from USB
-
-```{warning}
-This step deletes all data, including the original OS, from the laptop.
-```
-
-To install Ubuntu Linux as the operating system on the Scout Server laptop:
-
-1. Plug the thumb drive with the downloaded Ubuntu image into the Scout Server laptop.
-2. Restart the laptop.
-3. On restart, press the **F12** key for the boot menu.
-4. Select the USB drive and boot to the USB.
-5. On a separate computer, open the [Install support guide](https://ubuntu.com/tutorials/install-ubuntu-desktop#4-boot-from-usb-flash-drive). Start with Step 4.
-6. Select **Normal Installation** and check both of the following:
-    * Download updates while installing Ubuntu
-    * Install third-party software for graphics and Wi-Fi hardware and additional media formats
-7. Select **Erase disk and install Ubuntu**
-8. Once installation is complete, restart the computer and remove the thumb drive.
-
-### First-time Ubuntu configuration
-
-After the Ubuntu Linux boots for the first time, select the following options during its initial configuration questions:
-
-1. Click **Next** on Livepatch to skip setup.
-2. When prompted with Help improve Ubuntu, select **No** before clicking **Next**.
-3. **Allow** Location Services, then click **Next**.
-4. Click **Next** on Privacy.
+## Operating System
+The Wild Me team develops and tests on Linux Ubuntu. We have external verification that Scout runs on macs, but it may be necessary to test locally before updating your production system. Instructions below assume Ubuntu for commands.
 
 ## Storage
 
 ```{warning}
-Ensure the Ubuntu user account has write permissions for all folders and is the same account used to start the Scout container.
+Ensure the user account has write permissions for all folders and is the same account used to start the Scout container.
 ```
 
 Scout is designed to process large volumes of aerial survey imagery, which may come in terabytes. Ensure you have adequate image storage available.
