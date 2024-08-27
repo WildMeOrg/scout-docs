@@ -10,13 +10,15 @@ With Scout, you can:
 * Draw division lines for overlapping image sequences with annotations
 * Export .CSV data files for statistical analysis
 
-## Who Should Read This Document
+## Where Should I Start?
 
-This documentation supports three Scout user roles:
+* Are you planning on setting up Scout on your computer and managing the system, including system updates? You should start with the [System Administrator](system-administrators/index.md) section.
+* Are you going to manage image upload, user accounts, and data management? Do you have the final say in annotation state? You should start with [Lab Lead](lab-lead/index.md) section.
+* Are you going to be reviewing images and editing annotations? You should start with the [Annotators](all-users/index.md) section.
 
-* *[System Administrators](system-administrators/index.md)* should be Linux- and computer hardware-savvy individuals who sets up Scout inside a lab. The System administrator’s primary functions are to install Linux on a powerful laptop, connect a network-attached storage (NAS) device to the laptop to hold high volumes of imagery, and install and run Scout via Docker. A system administrator verifies proper Scout installation and then communicates the URL to a lab lead to one or more lab leads.
-* *[Lab Leads](lab-lead/index.md)* connect to Scout through a Chrome web browser and EW responsible for creating and managing user accounts, coordinating work (e.g., assigning groups of images as Tasks to annotators or (ML models), reviewing annotator work to create final “ground truth” annotations, drawing division lines to specify overlap in imagery with annotated animals, and exporting data for analysis in third party applications.
-* *[Annotators](all-users/index.md)* log into Scout through a Chrome web browser and receives tasks to annotate from lab leads. An annotator is responsible for drawing and labeling bounding boxes on each image, with each bounding box representing an occurrence of a single animal or other supported classification found in an image.
+## We're here to help!
+Have questions on setup and maintenance? Join the [Wild Me Development Discord](https://discord.gg/zw4tr3RE4R) and we'll help you get to the root of the problem.
+Have questions on how to annotate, what data will work out of the box, or anything in the user interface? Join the [Wild Me Community Forums](community.wildme.org) and we'll get you answers.
 
 ```{toctree}
 :hidden:
