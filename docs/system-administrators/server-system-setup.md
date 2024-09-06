@@ -48,3 +48,7 @@ From the Terminal window, you can test GPU execution on the laptop by executing 
 1. Run the following command: `docker run -it --rm --gpus all -p 5000:7860 wildme/scoutbot:main python3 app2.py`
 2. Open a separate Terminal window to watch GPU performance.
 3. Press CTRL-C to end the test.
+
+```{note}
+If the command results in an error containing `nvidia`, you may not have the correct GPU to use this tool. To verify, install `nvtop` and run the command `nvtop` in your console. If you have nvidia GPU, it will display use information and the name of an nvidia GPU. 
+```
