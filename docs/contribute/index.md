@@ -3,6 +3,7 @@
 ```{toctree}
 :hidden:
 
+dev-setup.md
 pr-workflow
 code-guide
 roadmap
