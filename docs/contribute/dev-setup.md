@@ -7,7 +7,7 @@ The following instructions are for once you've made changes to your local forked
 1. `cd` to root folder of scout
 1. Build the docker image of your altered code. You'll want to tag the image for easy reference later. For this demo, we use the tag `yourimage`.
     ```
-    docker build -t yourimage
+    docker build -t yourimage .
     ```
 1. Verify you have a successful build. Check your terminal logs for the following:
     ```
