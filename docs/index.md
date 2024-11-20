@@ -12,7 +12,7 @@ With Scout, you can:
 
 ## Where Should I Start?
 
-* Are you planning on setting up Scout on your computer and managing the system, including system updates? You should start with the [System Administrator](system-administrators/index.md) section.
+* Are you planning on setting up Scout on your computer and managing the system, including system updates? You should start with the [System Setup and Maintenance](setup-and-maintenance/index.md) section.
 * Are you going to manage image upload, user accounts, and data management? Do you have the final say in annotation state? You should start with [Lab Lead](lab-lead/index.md) section.
 * Are you going to be reviewing images and editing annotations? You should start with the [Annotators](all-users/index.md) section.
 
@@ -22,7 +22,7 @@ Have questions on how to annotate, what data will work out of the box, or anythi
 
 ```{toctree}
 :hidden:
-system-administrators/index
+setup-and-maintenance/index
 lab-lead/index
 all-users/index
 support-and-faq

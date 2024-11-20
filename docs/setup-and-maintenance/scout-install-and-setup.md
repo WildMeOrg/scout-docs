@@ -1,4 +1,4 @@
-# Scout Installation and Startup
+# Scout Setup
 
 System setup must be completed before you can complete Scout Installation.
 
@@ -47,4 +47,4 @@ If your server has a hostname such as “scoutserver”, you should also be able
 
 * **Password override token**: This token is only needed if the Lab Lead forgets their password and cannot sign in. This token changes with every restart of Scout. Your password override token is: `lccmnvxw6j`. Paste this token in place of your password to log in (you can then change your password).
 
-Setup is complete after providing the Lab Lead the Scout Server URL and image directory full path on the NAS.
+Setup is complete after providing the Lab Lead the Scout Server URL and image directory full path.

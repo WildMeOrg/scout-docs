@@ -1,5 +1,5 @@
 # Dev Environment Setup
-Pre-reqs and system setup are covered in [server setup](../system-administrators/server-system-setup.md). You will then need to [fork and clone the repo](pr-workflow.md).
+Pre-reqs and system setup are covered in [server setup](../setup-and-maintenance/server-system-setup.md). You will then need to [fork and clone the repo](pr-workflow.md).
 
 ## Local Testing
 
@@ -18,7 +18,7 @@ The following instructions are for once you've made changes to your local forked
     ```
     docker run --privileged -p 1337:1337 --rm -it --gpus all --mount type=bind,source=/data,target=/data -e ENV_IP="`ip route get 1 | sed 's/^.*src \([^ ]*\).*$/\1/;q'`" -v /data/scout/db:/data/db -v /data/scout/tmp:/tmp/scout-tmp yourimage:latest
     ```
-1. Provide the image directory information you created in [server setup](../system-administrators/server-system-setup.md). This will only be necessary for your first setup.
+1. Provide the image directory information you created in [server setup](../setup-and-maintenance/server-system-setup.md). This will only be necessary for your first setup.
 1. Check your work! Use your browser to access `localhost:1337` and see if your changes are working as desired.
 1. Continue making changes or create your [PR](pr-workflow.md).
 
