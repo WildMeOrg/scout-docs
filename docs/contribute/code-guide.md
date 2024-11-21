@@ -13,7 +13,7 @@ Generally speaking, we want to avoid in-line styling to allow for greater consis
 ## Internationalization
 All Wild Me tools are intended for an international audience, so we want to provide translated versions. An active goal for 2024 is to get ensure that all product copy has been internationalized according to the following standard.
 
-At present, in Wildbook, all copy except for site name, notification messages, and species names are wrapped and localized to 4 languages: english, french, spanish, and italian.
+At present, Scout is not internationalized for any language.
 
 ## EXIF data handling
 EXIF data is notoriously inconsistent between different cameras. Unless we want to provide an entire suite of EXIF management tools (we do not), we must make assumptions about the data coming in, prepare for those assumptions to be wrong, and fail gracefully. Any development focused on EXIF data management should catch exceptions for the following cases:

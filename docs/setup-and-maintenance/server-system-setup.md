@@ -1,4 +1,4 @@
-# Server System Setup
+# Server Setup
 
 Scout can be configured a number of ways, some of which require additional system setup.
 
@@ -19,6 +19,9 @@ Scout is designed to process large volumes of aerial survey imagery, which may c
     * As soon as this subfolder is created, you can begin copying your images into it.
 3. The first should be for data storage. We recommend `/data/scout/db`
 4. The second is for temporary use during processing. We recommend `/data/scout/tmp`
+
+## NVIDIA GPU Setup
+The following sections require use of an NVIDIA GPU.
 
 ### CUDA toolkit
 

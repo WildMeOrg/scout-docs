@@ -1,12 +1,15 @@
-# System Maintenance
+# Updates and Maintenance
 
 ## Add Survey Images
 
-If **Scout** is running, it automatically checks this folder periodically for new images and copies them for internal storage and processing. Images added to this folder disappear from the Ubuntu desktop folder as **Scout** imports them.
+If Scout is running, it automatically checks this folder periodically for new images and copies them for internal storage and processing. Images added to this folder disappear from the Ubuntu desktop folder as Scout imports them.
  
-Note: Anyone who has access to the **Scout** Server or the NAS remotely can copy aerial survey images into the `/data/scout/images` folder.
+Note: Anyone who has access to the Scout Server or the NAS remotely can copy aerial survey images into the `/data/scout/images` folder.
  
-An alert bar displays in **Scout** when image ingestion is in progress, warning users that new images are being added and therefore not all images may be available for task creation.
+An alert bar displays in Scout when image ingestion is in progress, warning users that new images are being added and therefore not all images may be available for task creation.
+
+## Update to a New Version
+TBD
 
 ## NAS Disconnection and Reconnection
 
