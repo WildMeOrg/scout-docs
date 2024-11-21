@@ -1,4 +1,4 @@
-# Hot Keys
+# Labels and Hot Keys
 
 Lab Leads should set up hot keys and labels before assigning tasks to annotators.
 

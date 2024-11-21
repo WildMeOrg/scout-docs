@@ -1,4 +1,4 @@
-# How to Evaluate Annotator Performance
+# Evaluate Annotator Performance
 
 Use both the Image and Annotation CSV exports allows evaluation of the whole image classifier (WIC). For this performance method, we use the following definition of ground truth:
 

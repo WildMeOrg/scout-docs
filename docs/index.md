@@ -13,8 +13,8 @@ With Scout, you can:
 ## Where Should I Start?
 
 * Are you planning on setting up Scout on your computer and managing the system, including system updates? You should start with the [System Setup and Maintenance](setup-and-maintenance/index.md) section.
-* Are you going to manage image upload, user accounts, and data management? Do you have the final say in annotation state? You should start with [Lab Lead](lab-lead/index.md) section.
-* Are you going to be reviewing images and editing annotations? You should start with the [Annotators](all-users/index.md) section.
+* Are you going to manage image upload, user accounts, and data management? Do you have the final say in annotation state? You should start with the [Administration](administration/index.md) section.
+* Are you going to be reviewing images and editing annotations? You should start with the [Get Started](get-started.md) section.
 
 ## We're here to help!
 Have questions on setup and maintenance? Join the [Wild Me Development Discord](https://discord.gg/zw4tr3RE4R) and we'll help you get to the root of the problem.
@@ -22,16 +22,24 @@ Have questions on how to annotate, what data will work out of the box, or anythi
 
 ```{toctree}
 :hidden:
+get-started
+annotate-task
+image-gallery
+ground-truth
+division-lines
+export-data
+evaluate-annotator-performance
 setup-and-maintenance/index
-lab-lead/index
-all-users/index
+administration/index
+scoutbot/index
 support-and-faq
 ```
 
-## How Can You Help?
+## How Can I Help?
 
 Want to put your talents to use fighting the 6th mass extinction? We're excited to have you! Get started here:
 
 ```{toctree}
+:maxdepth: 2
 contribute/index
 ```
