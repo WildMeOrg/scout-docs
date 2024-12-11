@@ -2,7 +2,8 @@
 
 Scout is an early stage product where we are working to improve on the installation and usage processes. That being said, for the best experience with setting up Scout, we recommend system administrators have experience with their given operating system and have familiarity with working from the console.
 
-Ideal setup for Scout includes enough space for high volumes of imagery, such as a NAS, and a system with powerful Nvidia GPU. Scout runs on Linux and Mac, but primary development is on Ubuntu.
+Ideal setup for Scout includes enough space for high volumes of imagery, such as a NAS, and a system with powerful Nvidia GPU. 
+All development and installation instructions provided are for Linux. Wild Me does not guarantee support for any other operating system.
 
 ## System Requirements
 

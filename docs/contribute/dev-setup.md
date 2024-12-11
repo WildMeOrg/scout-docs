@@ -22,8 +22,26 @@ The following instructions are for once you've made changes to your local forked
 1. Check your work! Use your browser to access `localhost:1337` and see if your changes are working as desired.
 1. Continue making changes or create your [PR](pr-workflow.md).
 
-### Alternative run commands
-If you are doing development work on a feature that is not impacted by image availability or ML results, you can run without GPU support.
+### Run without GPU
+If you are doing development work on a feature that is not impacted by image availability or ML results, you can go from [storage setup](../setup-and-maintenance//server-system-setup.md#storage) to setting up your code repo.
 ```
 docker run --privileged -p 1337:1337 --rm -it --mount type=bind,source=/data,target=/data -e ENV_IP="`ip route get 1 | sed 's/^.*src \([^ ]*\).*$/\1/;q'`" -v /data/scout_data:/data/db -v /data/scout/tmp:/tmp/scout-tmp yourimage:latest
 ```
+## Run image that includes data
+
+To simplify development, we have provided a Docker image that comes pre-loaded with image data and tasks. Example images are from the [WAID dataset from Applied Sciences](https://github.com/xiaohuicui/WAID/).
+
+Note that this version of Scout does not include Scoutbot and therefore does not require a GPU to function. This also means, however, that it cannot process images with ML classifiers.
+
+#### One time setup
+From root of the code directory (`/scout`), run `npm install` to make sure all necessary libraries are installed.
+
+#### Usage
+1. `cd` to the `/develop-with-data` directory
+1. Run `docker-compose up` to fetch that docker image and run Scout.
+1. Once running, use a browser to open http://localhost:1337
+1. Login with `admin`/`admin` as username/password.
+
+#### Troubleshooting
+- If you encounter a docker error `urllib3.exceptions.URLSchemeUnknown: Not supported URL scheme http+docker`, try running `pip install requests=2.31.0`
+- If your process fails, you should run `docker-compose down` to stop the container when you shut down your scout instance (`Ctrl+C`)
