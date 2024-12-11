@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Data Exports &#8212; Scout  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'export-data';</script>
+    <script src="_static/tocjs.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Evaluate Annotator Performance" href="evaluate-annotator-performance.html" />
+    <link rel="prev" title="Draw Division Lines" href="division-lines.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Scout  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="get-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="annotate-task.html">Manually Annotate Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image-gallery.html">Image Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ground-truth.html">Ground Truth Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="division-lines.html">Draw Division Lines</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Exports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaluate-annotator-performance.html">Evaluate Annotator Performance</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="setup-and-maintenance/index.html">System Setup and Maintenance</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup-and-maintenance/server-system-setup.html">Server Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup-and-maintenance/scout-install-and-setup.html">Scout Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup-and-maintenance/system-maintenance.html">Updates and Maintenance</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="administration/index.html">Administration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="administration/manage-users.html">Manage Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="administration/manage-labels.html">Labels and Hot Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="administration/manage-task.html">Manage Tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="administration/delete.html">Delete Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="scoutbot/index.html">Scoutbot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support-and-faq.html">Support and FAQ</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="contribute/index.html">Ways to Contribute</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="contribute/dev-setup.html">Dev Environment Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute/pr-workflow.html">Pull Request Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute/code-guide.html">Code Contribition Guideline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute/roadmap.html">Roadmap</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/export-data.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data Exports</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-task-annotation-and-image-data-for-analysis">Exporting Task Annotation and Image Data for Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#export-images-csv-data">Export Images CSV Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#export-annotation-csv-data">Export Annotation CSV Data</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="data-exports">
+<h1>Data Exports<a class="headerlink" href="#data-exports" title="Link to this heading">#</a></h1>
+<section id="exporting-task-annotation-and-image-data-for-analysis">
+<h2>Exporting Task Annotation and Image Data for Analysis<a class="headerlink" href="#exporting-task-annotation-and-image-data-for-analysis" title="Link to this heading">#</a></h2>
+<p>Data can be exported for third-party application analysis and modeling by generating image and annotation data as <code class="docutils literal notranslate"><span class="pre">CSV</span></code> for one or more tasks selected in the Tasks view. Here’s how to export data:</p>
+<ol class="arabic simple">
+<li><p>Click <strong>Tasks</strong> in the header navigation menu to open the Tasks view.</p></li>
+<li><p>In the Tasks view, use the filters to filter the table down to only those tasks that you want to export.</p></li>
+<li><p>Click the <strong>Export Filtered Results</strong> button and then select <strong>Export Annotations</strong> or <strong>Export Images</strong> options to choose the content of the <code class="docutils literal notranslate"><span class="pre">CSV</span></code> file to export.</p></li>
+<li><p>A progress bar indicates the compilation progress of the downloadable <code class="docutils literal notranslate"><span class="pre">CSV</span></code> file. When the progress bar completes, click Download to download the <code class="docutils literal notranslate"><span class="pre">CSV</span></code> file.</p></li>
+</ol>
+<p><img alt="ttexport" src="_images/tasktable-exportoptions.png" /></p>
+</section>
+<section id="export-images-csv-data">
+<h2>Export Images CSV Data<a class="headerlink" href="#export-images-csv-data" title="Link to this heading">#</a></h2>
+<p>The following fields are available in the Export Images CSV file:</p>
+<ul class="simple">
+<li><p><strong>Task Name</strong> - Name of the task this image was included in. An image may be included in multiple tasks, and if so, the task name is repeated on multiple lines in this file.</p></li>
+<li><p><strong>Task ID</strong> - The <strong>Scout internal ID</strong> of the task this image belongs to.</p></li>
+<li><p><strong>Image Filename</strong> - Original filename of the image.</p></li>
+<li><p><strong>WIC Confidence</strong> - <em>Machine learning score</em> predicting confidence of one or more labels present in the image. The score ranges from 0 (nothing predicted in the image) to 1 (maximum confidence that at least one ML model category would be found in the image). <em>If ML has not been run on this image, the WIC Confidence is empty.</em></p></li>
+<li><p><strong>Ground Truth Status</strong> - True/False value indicating whether review of this image has been completed in the Ground Truth task stage.</p></li>
+<li><p><strong>Exclusion Side</strong> - The side of the Division Line that is exclude in counts of animals in overlapping images. This value is always: <strong>right.</strong></p></li>
+<li><p><strong>Inclusion Top X Fraction</strong> - The decimal fraction (0 to 1) of the top insertion point of the division line. This is the fraction of the image width from the left-side of the image at which the top of the division line intersects the bottom of the image.</p></li>
+<li><p><strong>Inclusion Bottom X Fraction</strong> - The decimal fraction (0 to 1) of the bottom insertion point of the division line. This is the fraction of the image width from the left-side of the image at which the bottom of the division line intersects the bottom of the image.</p></li>
+</ul>
+</section>
+<section id="export-annotation-csv-data">
+<h2>Export Annotation CSV Data<a class="headerlink" href="#export-annotation-csv-data" title="Link to this heading">#</a></h2>
+<p>The following fields are available in the Export Annotations CSV file:</p>
+<ul class="simple">
+<li><p><strong>Task Name</strong> - The name of the task that the annotation is included.</p></li>
+<li><p><strong>Task ID</strong> - The <em>Scout internal ID</em> of the task this annotation belongs to.</p></li>
+<li><p><strong>Image Filename</strong> - Original filename of the image.</p></li>
+<li><p><strong>Image ID</strong> - <em>Scout internal ID</em> of the image.</p></li>
+<li><p><strong>Box X</strong> - <em>X coordinate</em> of the annotation bounding box’s top left corner.</p></li>
+<li><p><strong>Box Y</strong> - <em>Y coordinate</em> of the annotation bounding box’s top left corner.</p></li>
+<li><p><strong>Box W</strong> - Pixel width of the bounding box.</p></li>
+<li><p><strong>Box H</strong> - Pixel height of the bounding box.</p></li>
+<li><p><strong>Box Confidence</strong> - If machine learning created an annotation, this is the confidence score of the bounding box of this annotation. The score ranges from 0 <em>(no confidence)</em> to 1 <em>(maximum confidence that the box is correctly predicted)</em>.</p></li>
+<li><p><strong>Classification</strong> - The predicted classification (i.e. <em>type</em>) of the bounding box, such as <em>elephant</em> or <em>buffalo</em>.</p></li>
+<li><p><strong>Classification Confidence</strong> - If machine learning created this annotation, this is the confidence score of the classification (e.g., <em>elephant</em>) assigned to this annotation. The score ranges from 0 <em>(no confidence)</em> to 1 <em>(maximum confidence that the classification is correct)</em>.</p></li>
+<li><p><strong>Assignee</strong> - The Scout user that drew the bounding box.</p></li>
+<li><p><strong>Timestamp</strong> - Timestamp of annotation creation.</p></li>
+<li><p><strong>Is Ground Truth</strong> - Whether this annotation has been approved in the Ground Truth process. Annotations that have this field as True are likely to be more reliably accurate as they have been reviewed independently.</p></li>
+<li><p><strong>Excluded By Line</strong> - Whether the centroid of this bounding box falls outside or inside the division line.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="division-lines.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Draw Division Lines</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="evaluate-annotator-performance.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Evaluate Annotator Performance</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-task-annotation-and-image-data-for-analysis">Exporting Task Annotation and Image Data for Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#export-images-csv-data">Export Images CSV Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#export-annotation-csv-data">Export Annotation CSV Data</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Wild Me
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024 Conservation X Labs.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

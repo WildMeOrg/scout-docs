@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Manage Tasks &#8212; Scout  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'administration/manage-task';</script>
+    <script src="../_static/tocjs.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Delete Data" href="delete.html" />
+    <link rel="prev" title="Labels and Hot Keys" href="manage-labels.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Scout  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../get-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../annotate-task.html">Manually Annotate Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../image-gallery.html">Image Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ground-truth.html">Ground Truth Review</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../division-lines.html">Draw Division Lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../export-data.html">Data Exports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../evaluate-annotator-performance.html">Evaluate Annotator Performance</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup-and-maintenance/index.html">System Setup and Maintenance</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setup-and-maintenance/server-system-setup.html">Server Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup-and-maintenance/scout-install-and-setup.html">Scout Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup-and-maintenance/system-maintenance.html">Updates and Maintenance</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Administration</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="manage-users.html">Manage Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manage-labels.html">Labels and Hot Keys</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Manage Tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delete.html">Delete Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../scoutbot/index.html">Scoutbot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support-and-faq.html">Support and FAQ</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../contribute/index.html">Ways to Contribute</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/dev-setup.html">Dev Environment Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/pr-workflow.html">Pull Request Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/code-guide.html">Code Contribition Guideline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/roadmap.html">Roadmap</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/administration/manage-task.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Manage Tasks</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-tasks">Viewing Tasks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-table">Task Table</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-tasks">Filtering Tasks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-and-assigning-tasks">Creating and assigning tasks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-tags-to-tasks">Adding Tags to Tasks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-new-tags">Creating New Tags</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-existing-tags">Adding Existing Tags</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-tags">Deleting Tags</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="manage-tasks">
+<h1>Manage Tasks<a class="headerlink" href="#manage-tasks" title="Link to this heading">#</a></h1>
+<p>Tasks within Scout represent a group of images assigned to either a user or to a machine-learning model for annotation, which includes:</p>
+<ul class="simple">
+<li><p>drawing a bounding box around all animals of interest</p></li>
+<li><p>labeling the species for each bounding box</p></li>
+</ul>
+<p>The same image can appear in multiple Tasks, which can be duplicated for parallel annotation by different users. Different users can annotate the same images in different tasks. Tasks go through three stages:</p>
+<ol class="arabic simple">
+<li><p><strong>Annotation</strong>: Annotating animals in the images is the most important function of Scout. It is the only stage required for the downstream analysis of the tasks. Annotation can be performed by Lab Leads and Annotators.</p></li>
+<li><p><strong>Ground truth</strong>: The ground truth stage of a task involves the <em>review, correction</em>, and ultimately the approval of all annotations in an image by the Lab Lead. Once an image has gone through ground truth in any task, it does not appear for annotation or ground truth in another task that may contain it.</p></li>
+<li><p><strong>Division line</strong>: If an image is part of a sequence of images with annotated animals within them, then a Lab Lead may draw division lines to indicate overlap between images.</p></li>
+<li><p><strong>Export</strong>: Once they have been through all the stages mentioned, tasks are ready to export for analysis in third-party applications. <em>Note</em>: tasks don’t strictly have to go through the stages above to be exported, aside from annotation.</p></li>
+</ol>
+<p>Once all images in a task have gone through annotation, ground truth, and division lines, the task is considered completely done. Lab Leads ultimately creates tasks to help break up large volumes of aerial survey images into manageable chunks for Annotators to work through, and many tasks may make up a single transect, flight, and survey. The following recommendations apply when creating tasks:</p>
+<ul class="simple">
+<li><p>All images in a task should be <em>from a single side of the airplane</em>. This is important for the sequencing of images to draw division lines.</p></li>
+<li><p>A task should ideally correspond to either a single transect or a subset of images from that transect.</p></li>
+</ul>
+<section id="viewing-tasks">
+<h2>Viewing Tasks<a class="headerlink" href="#viewing-tasks" title="Link to this heading">#</a></h2>
+<p>Click the <strong>Tasks</strong> button on the header navigation menu to view the Tasks page.</p>
+<p><img alt="tasktable" src="../_images/scout-task-table.png" /></p>
+<section id="task-table">
+<h3>Task Table<a class="headerlink" href="#task-table" title="Link to this heading">#</a></h3>
+<p>Tasks are listed in rows in the task table below the filters. The details for each task are displayed in a horizontal row to the right of the task name. Filter tasks to view only tasks with specified qualities.</p>
+<p>Click the action buttons on the right side in each task row to annotate, ground truth, draw division lines, delete the task, or view the images in a task.</p>
+<p>The table columns are:</p>
+<ul class="simple">
+<li><p><strong>Task Name</strong>: name given to the task when it was created.</p></li>
+<li><p><strong>Side</strong>: side of the airplane that images in the task were from, <em>Left or Right.</em></p></li>
+<li><p><strong>Order</strong>: sequential or random.</p></li>
+<li><p><strong>Assignee</strong>: user assigned to the task.</p></li>
+<li><p><strong>Date Created</strong>: creation date of the task.</p></li>
+<li><p><strong>A%</strong>: percentage of image annotation complete in the task.</p></li>
+<li><p><strong>G%</strong>: percentage of image ground truth review complete in the task.</p></li>
+<li><p><strong>D%</strong>: percentage of image division line annotation complete in the task.</p></li>
+<li><p><strong>Annotate</strong> button: if images are still available for annotation in the task, this navigates to the annotation page.</p></li>
+<li><p><strong>Ground Truth</strong> button: if task annotation is 100% complete and images are still available for ground truth review in the task, this navigates to the ground truth page.</p></li>
+<li><p><strong>Division Lines</strong> button: if task ground truth is 100% complete and images are still available for division line annotation in the task, this navigates to the division line page.</p></li>
+<li><p><strong>Delete</strong> button: deletes the task. Deleting a task requires <em>manual confirmation</em> to avoid accidental data loss.</p></li>
+</ul>
+<p><img alt="deleteconfirm" src="../_images/confirmdel.png" /></p>
+<ul class="simple">
+<li><p><strong>Images</strong> button: navigates to the Image Gallery page to preview all images associated with that task.</p></li>
+</ul>
+<p>Under the table, the buttons to navigate through table data are:</p>
+<ul class="simple">
+<li><p><strong>Next</strong> button: provides access to subsequent rows of table data if more tasks match the filter criteria than can be displayed in the table</p></li>
+<li><p><strong>Previous</strong> button: provides access to previous rows of table data if more tasks match the filter criteria than can be displayed in the table</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must click your browser’s reload button to see changes to the Tasks view that have occurred since you loaded the page.</p>
+</div>
+</section>
+</section>
+<section id="filtering-tasks">
+<h2>Filtering Tasks<a class="headerlink" href="#filtering-tasks" title="Link to this heading">#</a></h2>
+<p>Filter tasks by any of the following in the <strong>Filters</strong> section above the tasks:</p>
+<ul class="simple">
+<li><p><strong>Task Name</strong>: Search for a task by its name.
+Enter the task name in the <strong>Task Name</strong> field, then click the <strong>Filter</strong> button in the top right corner.</p></li>
+<li><p><strong>Date created start</strong>: filter tasks created from this date. <em>Note:</em> the dates are for task creation and not based on the dates of images in the tasks.
+Click the calendar icon to the right of the <strong>Date Created Start</strong> field and select a date, then click the <strong>Filter</strong> button in the top right corner.</p></li>
+<li><p><strong>Date created end</strong>: filter tasks created up until this date.
+Click the calendar icon to the right of the <strong>Date Created End</strong> field and select a date, then click the <strong>Filter</strong> button in the top right corner.</p></li>
+<li><p><strong>Assignee</strong>: filter tasks to the specified users or ML models.
+Select the assignee/s in the scrollable <strong>Assignee</strong> list box, then click the <strong>Filter</strong> button in the top right corner.</p></li>
+<li><p><strong>Stage</strong>: filter tasks to their stage in the annotation, ground truth, and line division workflow.
+Select the stage/s of progress in the scrollable <strong>Stage</strong> list box, then click the <strong>Filter</strong> button in the top right corner.</p></li>
+<li><p><strong>Ordering type</strong>: filter tasks by sequential or random ordering type.
+Click the <strong>Ordering type</strong> dropdown menu, select an option, then click the <strong>Filter</strong> button in the top right corner.</p></li>
+<li><p>Tags: filter tasks by Tags you have created.
+Select the tag/s in the <strong>Tags</strong> list box, then click the <strong>Filter</strong> button in the top right corner.</p></li>
+</ul>
+<p>To select multiple <strong>Assignee, Stage, or Tags</strong> filters, hold down the Control key (Ctrl) on your keyboard while selecting multiple filters.</p>
+<p>To export a comma-separated values <code class="docutils literal notranslate"><span class="pre">(CSV)</span></code> file of annotation or image data filtered according to the Filters on the page, click the <strong>Export Filtered Results</strong> button and select an option. The export will be automatically generated.</p>
+<p>To return to the full view of unfiltered tasks, click the <strong>Reset</strong> button on the right of the <strong>Filter</strong> button.</p>
+</section>
+<section id="creating-and-assigning-tasks">
+<h2>Creating and assigning tasks<a class="headerlink" href="#creating-and-assigning-tasks" title="Link to this heading">#</a></h2>
+<p>Here’s how to create a new task to assign to a user:</p>
+<ol class="arabic simple">
+<li><p>Select <strong>Tasks</strong> from the Scout menu bar.</p></li>
+<li><p>Click the <strong>+Create Task</strong> button on the Tasks page.</p></li>
+<li><p>In the <strong>New Task form</strong>, do the following information:</p>
+<ul class="simple">
+<li><p>Enter a <strong>unique name</strong> for the task in the <strong>Task Name field</strong>. Human-readable task names are recommended, such as: <code class="docutils literal notranslate"><span class="pre">Lewa</span> <span class="pre">Flight</span> <span class="pre">2022-09-15</span> <span class="pre">Transect</span> <span class="pre">1</span> <span class="pre">Images</span> <span class="pre">1-500</span></code></p></li>
+<li><p>Select the appropriate annotator or ML model from the <strong>Assignee dropdown</strong> list.</p></li>
+<li><p>Select the appropriate side of the plane that the camera was on when it took the images of this task, <strong>Left</strong> or <strong>Right</strong>, <strong>in the Camera Side field.</strong>
+<img alt="newtask" src="../_images/newtask.png" /></p></li>
+</ul>
+</li>
+<li><p>Click <strong>Select Images</strong> to add images to the task using the Select Images dialog box.</p></li>
+<li><p>In the <strong>Select Images</strong> dialog box, leverage the following fields to specify the images you want added to the task. As you adjust filters, the matching images count updates. Each field adds a logical AND to the matched images and further subsets matching to those images that match all chosen criteria.</p>
+<ul class="simple">
+<li><p>Enter letters and numbers to filter images by <strong>File Name</strong>, updating the matching images count as you type.</p></li>
+<li><p>Enter or select the name of an existing task that already contains a desired subset of images in the <strong>Duplicate From Existing Task</strong> field.</p></li>
+<li><p>Select <strong>Start and End dates</strong> to further filter images by. These filters match against the <code class="docutils literal notranslate"><span class="pre">EXIF</span></code> creation dates of the images.</p></li>
+<li><p>Select a range of numbers in the Subset Range (inclusive) field. Where a large number of images might match your criteria, a range allows you to specify a fixed, sorted subset. For example, you might select criteria matching 1000 images and assign a range of 1 to 500 in the task for the first annotator and a range of 501 to 1000 in the task for the second annotator.</p></li>
+</ul>
+</li>
+</ol>
+<p><img alt="newtaskimage" src="../_images/newtask-imageselect.png" /></p>
+<ol class="arabic simple" start="6">
+<li><p>Click <strong>Submit</strong> to create the new task. On successful creation, the task becomes available in the <strong>Tasks view</strong>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There may be a short delay after creation of a task before it is ready for annotation, depending on the number of images in it.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If during task creation you see the following message in the New Task form, please be aware that new images are being added to Scout.</p>
+</div>
+<p><img alt="ingestionnotice" src="../_images/image-ingestion-notice.png" />
+If the images you need to add to this task have already been ingested, you can ignore this message. However, it is recommended to wait for ingestion to complete and for the alert to drop before creating your new task. Having all images present is important if you wish to select a range of images for the task, and not all of those images have been added yet.</p>
+</section>
+<section id="adding-tags-to-tasks">
+<h2>Adding Tags to Tasks<a class="headerlink" href="#adding-tags-to-tasks" title="Link to this heading">#</a></h2>
+<p>Create and apply custom tags to tasks to view groups of tasks with aspects in common.</p>
+<section id="creating-new-tags">
+<h3>Creating New Tags<a class="headerlink" href="#creating-new-tags" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Scroll down to the appropriate task.</p></li>
+<li><p>Locate and click the pencil icon on the left of the task row:</p></li>
+<li><p>To add the first new tag to a task, click the pencil icon next to the <strong>Tags:</strong> heading under the task name.</p></li>
+<li><p>To add additional new tags to a task, hover over the task row then click the pencil icon to the right of the existing tags.</p></li>
+<li><p>Type the new tag in the <strong>Enter new tag</strong> field.</p></li>
+<li><p>Click the <strong>Save</strong> button.</p></li>
+</ol>
+<p>The new tag is listed in the <strong>Tags</strong> list box on the right above the Tasks.</p>
+</section>
+<section id="adding-existing-tags">
+<h3>Adding Existing Tags<a class="headerlink" href="#adding-existing-tags" title="Link to this heading">#</a></h3>
+<p>To add existing tags to a task:</p>
+<ol class="arabic simple">
+<li><p>Scroll down to the appropriate task.</p></li>
+<li><p>Locate and click the pencil icon on the left of the task row:</p>
+<ol class="arabic simple">
+<li><p>To add the first tag to a task, click the pencil icon next to the <strong>Tags:</strong> heading under the task name.</p></li>
+<li><p>To add additional tags to a task, hover over the task row then click the pencil icon to the right of the existing tags.</p></li>
+</ol>
+</li>
+<li><p>Click the <strong>Choose tag</strong> dropdown menu and select a tag.</p></li>
+<li><p>Click the <strong>Save</strong> button on the right of the dropdown menus.</p></li>
+</ol>
+<p>To add existing tags while creating a new task:</p>
+<ol class="arabic simple">
+<li><p>Click the <strong>+ Create Task</strong> button in the top left corner.</p></li>
+<li><p>On the <strong>New Task</strong> page, select tags in the scrollable <strong>Tags</strong> box.</p></li>
+<li><p>Fill in and select the other details, then click the <strong>Submit</strong> button.</p></li>
+</ol>
+</section>
+<section id="deleting-tags">
+<h3>Deleting Tags<a class="headerlink" href="#deleting-tags" title="Link to this heading">#</a></h3>
+<p>Deleting a tag removes it from the list of tags and all tasks.</p>
+<ol class="arabic simple">
+<li><p>Hover over the task row then click the pencil icon to the right of the existing tags.</p></li>
+<li><p>Click the <strong>x</strong> symbol on the right of the tag.</p></li>
+</ol>
+<p>To return to the default view of a task after clicking the pencil icon but not performing an action, hover over the task row and click the pencil icon to the right of the <strong>Save</strong> button.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="manage-labels.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Labels and Hot Keys</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="delete.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Delete Data</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-tasks">Viewing Tasks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-table">Task Table</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-tasks">Filtering Tasks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-and-assigning-tasks">Creating and assigning tasks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-tags-to-tasks">Adding Tags to Tasks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-new-tags">Creating New Tags</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-existing-tags">Adding Existing Tags</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-tags">Deleting Tags</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Wild Me
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024 Conservation X Labs.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
